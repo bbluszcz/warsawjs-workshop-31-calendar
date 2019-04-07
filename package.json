@@ -1,0 +1,21 @@
+{
+  "name": "warsawjs-workshop-31-calendar-server",
+  "version": "0.2.0",
+  "description": "Express server serving client app and api",
+  "main": "index.js",
+  "author": "G3F4",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "4.16.4",
+    "morgan": "1.9.1"
+  },
+  "scripts": {
+    "client:build": " tar -zxvf client-package.tar.gz && mv build public",
+    "dev": "nodemon index.js",
+    "start": "npm run client:build && DB=remote node index.js"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.10"
+  }
+}
